@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewData["Title"] = "Refund";
+}
+@section Scripts {
+    <script>
+        function loadCharges() {
+            var tableBody = $('#charges');
+
+            $.ajax({
+                url: '/api/charges/listcharges',
+                dataType: 'json',
+                success: function (data) {
+                    $('#status').hide();
+                    for (var i = 0; i < data.length; i++) {
+                        var tableRow = '<tr>';
+                        tableRow += '<td>' + data[i].created + '</td>';
+                        tableRow += '<td>$' + data[i].amount / 100 + '</td>';
+                        tableRow += '<td>$' + data[i].amountRefunded / 100 + '</td>';
+                        tableRow += '<td>' + data[i].description + '</td>';
+                        tableRow += '<td><a href=\"' + data[i].receiptUrl + '\">Receipt</a></td>';
+                        tableRow += '<td>' + data[i].status + '</td>';
+                        tableRow += '<td><button onclick=\"refund(\'' + data[i].id + '\')\">Refund</button>' + '</td>';
+                        tableRow += '<tr />'
+                        tableBody.append(tableRow);
+                    }
+                    $('#charges-table').show();
+                },
+                error: function (result) {
+                    $('#status').html('<img src="/ajax-loader.gif" /> Failed to load charges, retrying...');
+                    setTimeout(loadCharges, 3000);
+                }
+            });
+        }
+        $('document').ready(function () {
+            $('#status').html('<img src="/ajax-loader.gif" /> Loading charges...');
+            loadCharges();
+        });
+        function refundRequest(chargeId) {
+            $.ajax({
+                url: '/api/charges/refund',
+                type: 'post',
+                data: { "charge_id": chargeId },
+                success: function (data) {
+                    $('#refund-charge-status').html('Successfully refunded charge');
+                },
+                error: function (xhr, err, data) {
+                    if (xhr.status == 0) {
+                        $('#refund-charge-status').html('<img src="/ajax-loader.gif" /> Could not reach server. Trying again...');
+                        setTimeout(function () {
+                            refundRequest(chargeId);
+                        }, 3000);
+                    } else {
+                        $('#refund-charge-status').html('Error. ' + xhr.responseJSON.message);
+                    }
+                }
+            });
+        }
+        function refund(chargeId) {
+            $('#refund-process-info').show();
+            $('#refund-charge-status').html('<img src="/ajax-loader.gif" /> Refunding charge...');
+            refundRequest(chargeId);
+        }
+    </script>
+}
+
+<style>
+    td, th {
+        padding: 1em;
+    }
+
+    #charges-table {
+        display: none;
+    }
+
+    tr, th, tbody, td, #charges-table {
+        border: 1px solid;
+    }
+
+    #refund-process-info {
+        display: none;
+    }
+</style>
+
+<h1>Refund charges</h1>
+<br />
+<div id="status"></div>
+<div>
+    <table id="charges-table">
+        <thead>
+            <tr>
+                <th>Created</th>
+                <th>Amount</th>
+                <th>Amount refunded</th>
+                <th>Description</th>
+                <th>Receipt URL</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="charges">
+        </tbody>
+    </table>
+</div>
+<br>
+<div id="refund-process-info">
+    <h2>Refund charge</h2>
+    <div id="refund-charge-status"></div>
+</div>

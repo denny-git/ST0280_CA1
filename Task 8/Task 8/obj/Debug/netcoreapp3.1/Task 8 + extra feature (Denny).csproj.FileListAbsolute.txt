@@ -1,0 +1,119 @@
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\appsettings.json
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).exe
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).deps.json
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).runtimeconfig.json
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).runtimeconfig.dev.json
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).pdb
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).Views.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).Views.pdb
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Clarifai.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Cloudmersive.APIClient.NETCore.OCR.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\FubarCoder.RestSharp.Portable.Core.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\FubarCoder.RestSharp.Portable.HttpClient.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\JsonSubTypes.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).csprojAssemblyReference.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).AssemblyInfoInputs.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).AssemblyInfo.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).csproj.CoreCompileInputs.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).MvcApplicationPartsAssemblyInfo.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).RazorAssemblyInfo.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).RazorAssemblyInfo.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).TagHelpers.input.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).TagHelpers.output.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).RazorCoreGenerate.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\Home\OCR.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).RazorTargetAssemblyInfo.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).RazorTargetAssemblyInfo.cs
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).Views.pdb
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).csproj.CopyComplete
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\staticwebassets\Task 8 + extra feature (Denny).StaticWebAssets.Manifest.cache
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\staticwebassets\Task 8 + extra feature (Denny).StaticWebAssets.xml
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).dll
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).pdb
+D:\CSC\CA1\code\Task 8 + extra feature (Denny)\Task 8\obj\Debug\netcoreapp3.1\Task 8 + extra feature (Denny).genruntimeconfig.cache

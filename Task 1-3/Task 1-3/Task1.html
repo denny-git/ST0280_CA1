@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <title>Consuming weather web service using JQuery</title>
+</head>
+<body>
+    <h1>Consume weather web service using JQuery</h1>
+    <input id="Button1" type="button" value="Get weather" />
+    <div id="status"></div>
+    <br />
+    <div id="weather">
+    </div>
+
+    <script>
+        var retries = 3;
+        var count, singular, plural;
+        $(document).ready(function () {
+            $('#Button1').click(function () {
+                $('#status').html("<img src=\"/ajax-loader.gif\"> Retrieving data...");
+                loading();
+            })
+        })
+        function loading() {
+            setTimeout(getWeather, 2000);
+        }
+        function singularOrPlural(count, singular, plural) {
+            if (count > 1 | count == 0) {
+                return plural;
+            } else if (count == 1) {
+                return singular;
+            }
+        }
+        function getWeather() {
+            $('#loader').show();
+            $.ajax({
+                method: "GET",
+                url: "https://api.worldweatheronline.com/premium/v1/weather.ashx?q=china&format=json&num_of_days=3&key=4885acd0e4d345b9aef85812200305",
+                success: function (data, textStatus, jqXHR) {
+                    $('#status').text("Done!");
+                    $('#loader').hide();
+                    var responseData = jqXHR.responseJSON.data;
+                    console.log(responseData);
+
+                    var output = "";
+                    var countryName = (responseData.request[0].query);
+                    output += "<h2>3-day weather outlook for " + countryName + "</h2>";
+
+                    var weatherData = responseData.weather;
+
+                    for (index = 0; index < weatherData.length; index++) {
+                        maxTemperatureInCelcius = weatherData[index].maxtempC;
+                        minTemperatureInCelcius = weatherData[index].mintempC;
+                        weatherDate = weatherData[index].date;
+                        output += "Max C: " + maxTemperatureInCelcius + " Min C: " + minTemperatureInCelcius + " Date : " + weatherDate + "<br />";
+                    }
+                    $('#weather').html(output);
+                },
+                error: function (data, textStatus, statusCode) {
+                    if (retries >= 1) {
+                        $('#loader').hide();
+                        $('#status').text("<img src=\"/ajax-loader.gif\"> Request failed, trying again in 5 seconds (" + retries + singularOrPlural(retries, " retry", " retries") + " remaining)");
+                        retries--;
+                        setTimeout(getWeather, 5000);
+                    } else {
+                        $('#loader').hide();
+                        $('#status').text("Unable to complete request. Error details: " + statusCode);
+                    }
+                }
+            })
+        }
+
+    </script>
+</body>
+</html>

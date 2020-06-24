@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewData["Title"] = "SubscriptionsView";
+}
+@section Scripts {
+    <script>
+        function loadSubscriptions() {
+            var tableBody = $('#plans');
+
+            $.ajax({
+                url: '/api/subscriptions/active',
+                dataType: 'json',
+                success: function (data) {
+                    $('#status').hide();
+                    for (var i = 0; i < data.length; i++) {
+                        var tableRow = '<tr>';
+                        tableRow += '<td>' + data[i].productName + '</td>';
+                        tableRow += '<td>$' + data[i].price/100 + '</td>';
+                        tableRow += '<td>' + data[i].createdAt + '</td>';
+                        tableRow += '<td>' + data[i].periodStart + '</td>';
+                        tableRow += '<td>' + data[i].periodEnd + '</td>';
+                        tableRow += '<td>' + data[i].intervalCount + '</td>';
+                        tableRow += '<td>' + data[i].interval + '</td>';
+                        tableRow += '<td>' + data[i].resumesAt + '</td>';
+                        tableRow += '<td><button onclick=\"pause(\'' + data[i].id + '\')\">Pause subscription for 3 days</button>' + '</td>';
+                        tableRow += '<tr />'
+                        tableBody.append(tableRow);
+                    }
+                    $('#subscriptions-table').show();
+                },
+                error: function (result) {
+                    $('#status').html('<img src="/ajax-loader.gif" /> Failed to load subscriptions, retrying...');
+                    setTimeout(loadSubscriptions, 3000);
+                }
+            });
+        }
+        $('document').ready(function () {
+            $('#status').html('<img src="/ajax-loader.gif" /> Loading active subscriptions...');
+            loadSubscriptions();
+        });
+        function pauseRequest(subId) {
+            $.ajax({
+                url: '/api/subscriptions/pause',
+                type: 'post',
+                data: { "subscription_id": subId },
+                success: function (data) {
+                    $('#pause-subscription-status').html('Subscription paused successfully. Payments will resume at ' + data.message + '.');
+                },
+                error: function (xhr, err, data) {
+                    if (xhr.status == 0) {
+                        $('#pause-subscription-status').html('<img src="/ajax-loader.gif" /> Could not reach server. Trying again...');
+                        setTimeout(function () {
+                            pauseRequest(priceId);
+                        }, 3000);
+                    } else {
+                        $('#pause-subscription-status').html('Error. ' + xhr.responseJSON.message);
+                    }
+                }
+            });
+        }
+        function pause(subId) {
+            $('#pause-process-info').show();
+            $('#pause-subscription-status').html('<img src="/ajax-loader.gif" /> Pausing subscription...');
+            pauseRequest(subId);
+        }
+    </script>
+}
+
+<style>
+    td, th {
+        padding: 1em;
+    }
+    #subscriptions-table {
+        display: none;
+    }
+
+    tr, th, tbody, td, #subscriptions-table {
+        border: 1px solid;
+    }
+
+    #pause-process-info {
+        display: none;
+    }
+</style>
+
+<h1>Active subscriptions</h1>
+<br />
+<div id="status"></div>
+<div>
+    <table id="subscriptions-table">
+        <thead>
+            <tr>
+                <th>Plan name</th>
+                <th>Price</th>
+                <th>Created at</th>
+                <th>Period start</th>
+                <th>Period end</th>
+                <th>Interval count</th>
+                <th>Interval</th>
+                <th>Payment resumes at</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="plans">
+        </tbody>
+    </table>
+</div>
+<br>
+<div id="pause-process-info">
+    <h2>Pause subscription</h2>
+    <div id="pause-subscription-status"></div>
+</div>
+

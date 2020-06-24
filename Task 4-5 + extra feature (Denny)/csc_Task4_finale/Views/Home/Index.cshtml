@@ -1,0 +1,37 @@
+﻿<h1>Select image file to upload</h1>
+<br />
+<form id="formElem" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".jpg">
+    <input type="submit">
+</form>
+<br />
+<div id="div"></div>
+<script>
+    async function sendImage() {
+        var networkError = false;
+        var res = await fetch('/api/upload', {
+            method: 'POST',
+            body: new FormData(formElem)
+        })/*.catch(error => {
+            document.getElementById("div").innerHTML = "Encountered a network error, trying again...";
+            setTimeout(sendImage, 3000);
+        });*/
+
+        if (!networkError) {
+            if (res.status === 200) {
+                var resObject = await res.json();
+
+                document.getElementById("div").innerHTML = await resObject.message;
+            }
+            else {
+                var resObject = await res.json();
+                document.getElementById("div").innerHTML = "<font color=\"red\">Error " + await res.status + ". " + await resObject.message + "</font>";
+            }
+        }
+    }
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
+        document.getElementById("div").innerHTML = "<img src=\"/ajax-loader.gif\"/ > Uploading image...";
+        sendImage();
+    };
+</script>

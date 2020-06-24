@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "Receipt OCR using Clarifai and Cloudmersive";
+}
+
+<h1>Receipt OCR using Clarifai and Cloudmersive</h1>
+<br />
+<h2>Upload your receipt image here for image recognition</h2>
+<form id="formElem" enctype="multipart/form-data">
+    <input type="file" name="image_file" accept=".jpg,.jpeg,.png">
+    <input type="submit">
+</form>
+<br />
+<h2>Receipt image info</h2>
+<br />
+<div id="div">
+
+</div>
+<script>
+    function NullReplacer(valueToCheck) {
+        if (valueToCheck === null) {
+            return '-';
+        } else {
+            return valueToCheck;
+        }
+    }
+    async function sendImage() {
+        var networkError = false;
+        let res = await fetch('/api/OCR', {
+            method: 'POST',
+            body: new FormData(formElem)
+
+        }).catch(error => {
+            networkError = true;
+            document.getElementById("div").innerHTML = "<img src=\"/ajax-loader.gif\"> Encountered an error, retrying...";
+            setTimeout(sendImage, 3000);
+        })
+        if (!networkError) {
+            if (res.status === 200) {
+                var respObj = await res.json();
+
+                html = "";
+                html += "<h4>Business info (Cloudmersive)</h4>"
+                html += "<p>Address: " + NullReplacer(respObj.address) + "</p>"
+                html += "<p>Business name: " + NullReplacer(respObj.businessName) + "</p>"
+                html += "<p>Business website: " + NullReplacer(respObj.businessWebsite) + "</p>"
+                html += "<p>Phone: " + NullReplacer(respObj.phoneNumber) + "</p>"
+                html += "<h4>Receipt items (Cloudmersive)</h4>"
+                respObj.receiptItems.forEach(function (item, index) {
+                    html += item.itemDescription + ": $" + item.itemPrice + "<br /></br>"
+                });
+                html += "<p>Subtotal: $" + NullReplacer(respObj.receiptSubtotal) + "</p>"
+                html += "<p>Total: $" + NullReplacer(respObj.receiptTotal) + "<p>"
+                html += "<h4>Tags and probabilities (Clarifai)</h4>"
+                respObj.clarifaiTags.forEach(function (item, index) {
+                    html += item.name + ": " + item.value + "<br />"
+                });
+                document.getElementById("div").innerHTML = html;
+            } else {
+                var respObj = await res.json();
+
+                document.getElementById("div").innerHTML = "<font color=\"red\">" + await respObj.message + "</font>";
+            }
+        }
+
+        return res;
+    }
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
+        document.getElementById("div").innerHTML = "<img src=\"/ajax-loader.gif\"> Processing... This will take a while";
+        sendImage();
+    };
+</script>
+
