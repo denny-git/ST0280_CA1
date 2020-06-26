@@ -75,7 +75,7 @@ namespace Task3.Controllers
                 return BadRequest(ModelState);
             }
             HttpClient client = new HttpClient();
-            var res = client.GetAsync($"https://www.google.com/recaptcha/api/siteverify?secret=&response=" + model.Token).Result;
+            var res = client.GetAsync($"https://www.google.com/recaptcha/api/siteverify?secret=s&response=" + model.Token).Result;
 
             if((int)res.StatusCode != 200)
             {

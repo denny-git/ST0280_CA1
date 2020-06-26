@@ -157,9 +157,8 @@ namespace Task_6.Controllers
                     // Unexpected event type
                     return BadRequest();
                 }
-                return Ok();
             }
-            catch (StripeException e)
+            catch (StripeException)
             {
                 return BadRequest();
             }

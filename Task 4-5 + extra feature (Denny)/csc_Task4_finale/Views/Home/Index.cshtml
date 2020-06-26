@@ -12,10 +12,7 @@
         var res = await fetch('/api/upload', {
             method: 'POST',
             body: new FormData(formElem)
-        })/*.catch(error => {
-            document.getElementById("div").innerHTML = "Encountered a network error, trying again...";
-            setTimeout(sendImage, 3000);
-        });*/
+        })
 
         if (!networkError) {
             if (res.status === 200) {

@@ -27,11 +27,6 @@ namespace Task_8.Controllers
             return View();
         }
 
-        public IActionResult TTS()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

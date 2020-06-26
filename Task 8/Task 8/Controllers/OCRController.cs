@@ -13,6 +13,7 @@ using Clarifai.DTOs.Inputs;
 using Microsoft.AspNetCore.Hosting;
 using Clarifai.DTOs.Models.Outputs;
 using Clarifai.DTOs.Predictions;
+using Microsoft.AspNetCore.Http;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Task_8.Controllers
@@ -28,45 +29,55 @@ namespace Task_8.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-
         // POST api/<ValuesController>
         [HttpPost]
         public async Task<IActionResult> PostAsync()
         {
             Configuration.Default.AddApiKey("Apikey", "");
+            
             var apiInstance = new ImageOcrApi();
 
             var client = new ClarifaiClient("");
+
+            FileStream stream = null, imageFile = null;
 
             if (Request.Form.Files.GetFile("image_file") == null)
             {
                 return BadRequest(new { message = "No file was found in the request." });
             }
 
-
+            string fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, DateTimeOffset.Now.ToUnixTimeSeconds().ToString() + ".jpg");
             try
             {
 
                 var image = Request.Form.Files.GetFile("image_file");
 
-                var fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, DateTimeOffset.Now.ToUnixTimeSeconds().ToString() + ".jpg");
 
-                var stream = new FileStream(fileName, FileMode.Create);
+                stream = new FileStream(fileName, FileMode.Create);
                 await image.CopyToAsync(stream);
                 stream.Close();
 
-                var imageFile = new FileStream(fileName, FileMode.Open);
+                imageFile = new FileStream(fileName, FileMode.Open);
 
                 // Recognize a photo of a receipt, extract key business information
                 ReceiptRecognitionResult cloudmersiveResult = apiInstance.ImageOcrPhotoRecognizeReceipt(imageFile);
                 imageFile.Close();
 
-                var clarifaiResult = await client.PublicModels.GeneralModel.Predict(new ClarifaiFileImage(System.IO.File.ReadAllBytes(fileName))).ExecuteAsync();
+                //get tags of image using Clarifai public general model
+                var clarifaiTagsResult = await client.PublicModels.GeneralModel.Predict(new ClarifaiFileImage(System.IO.File.ReadAllBytes(fileName))).ExecuteAsync();
+
+                //get probability that image is a receipt using custom trained model
+                var clarifaiReceiptResult = await client.Predict<Concept>("Receipt_Recognition", new ClarifaiFileImage(System.IO.File.ReadAllBytes(fileName))).ExecuteAsync();
 
                 System.IO.File.Delete(fileName);
 
+                var clarifaiReceiptProbability = clarifaiReceiptResult.Get().Data;
+
+                var clarifaiTags = clarifaiTagsResult.Get().Data;
+
                 var result = new
                 {
+                    clarifaiTags = clarifaiTags,
                     address = cloudmersiveResult.AddressString,
                     businessName = cloudmersiveResult.BusinessName,
                     businessWebsite = cloudmersiveResult.BusinessWebsite,
@@ -74,27 +85,17 @@ namespace Task_8.Controllers
                     receiptItems = cloudmersiveResult.ReceiptItems,
                     receiptSubtotal = cloudmersiveResult.ReceiptSubTotal,
                     receiptTotal = cloudmersiveResult.ReceiptTotal,
-                    clarifaiTags = clarifaiResult.Get().Data
+                    receiptProbability = clarifaiReceiptProbability
                 };
                 return Ok(result);
-
             }
             catch (Exception e)
             {
-
+                System.IO.File.Delete(fileName);
+                stream.Close();
+                imageFile.Close();
                 return BadRequest(new { message = "An exception occurred while trying to tag and recognise receipt content. The error is: " + e.Message });
             }
-        }
-        // PUT api/<ValuesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

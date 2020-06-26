@@ -40,21 +40,39 @@
                 var respObj = await res.json();
 
                 html = "";
+                html += "<h4>Probability that image is a receipt (Clarifai)</h4>"
+                if (respObj.receiptProbability !== null) {
+                    respObj.receiptProbability.forEach(function (item, index) {
+                        html += item.name + ": " + item.value + "<br /></br>"
+                    });
+                } else {
+                    html += "Clarifai did not return a receipt probability"
+                }
                 html += "<h4>Business info (Cloudmersive)</h4>"
                 html += "<p>Address: " + NullReplacer(respObj.address) + "</p>"
                 html += "<p>Business name: " + NullReplacer(respObj.businessName) + "</p>"
                 html += "<p>Business website: " + NullReplacer(respObj.businessWebsite) + "</p>"
                 html += "<p>Phone: " + NullReplacer(respObj.phoneNumber) + "</p>"
                 html += "<h4>Receipt items (Cloudmersive)</h4>"
-                respObj.receiptItems.forEach(function (item, index) {
-                    html += item.itemDescription + ": $" + item.itemPrice + "<br /></br>"
-                });
+                if (respObj.receiptItems !== null) {
+                    respObj.receiptItems.forEach(function (item, index) {
+                        html += item.itemDescription + ": $" + NullReplacer(item.itemPrice) + "<br /></br>"
+                    });
+                } else {
+                    html += "No items were found in the receipt"
+                }
+                
                 html += "<p>Subtotal: $" + NullReplacer(respObj.receiptSubtotal) + "</p>"
                 html += "<p>Total: $" + NullReplacer(respObj.receiptTotal) + "<p>"
                 html += "<h4>Tags and probabilities (Clarifai)</h4>"
-                respObj.clarifaiTags.forEach(function (item, index) {
-                    html += item.name + ": " + item.value + "<br />"
-                });
+                if (respObj.clarifaiTags !== null) {
+                    respObj.clarifaiTags.forEach(function (item, index) {
+                        html += item.name + ": " + item.value + "<br />"
+                    });
+                } else {
+                    html += "No concepts returned by Clarifai"
+                }
+                
                 document.getElementById("div").innerHTML = html;
             } else {
                 var respObj = await res.json();

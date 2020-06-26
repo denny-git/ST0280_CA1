@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HxlwSpbRjKOkkiIB7zRiIgrpIWKGbAanhP62CjfX4aKUQy9tVFlC0j8ksEa+wW/JKj6Qay0SgwS5NE22y+CgUw==",
+  "dgSpecHash": "5XKT+6R+v4L+UvJp3doEAGZj+8FHY05V0IvplDu7mYyO7N7s+QQ/sRXrgpbmkPrLy7FzYu76K7wb21Jmu4QIiQ==",
   "success": true,
-  "projectFilePath": "D:\\CSC\\CA1\\code\\Task 8\\Task 8\\Task 8.csproj",
+  "projectFilePath": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 8\\Task 8\\Task 8.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Denny\\.nuget\\packages\\clarifai\\1.4.0\\clarifai.1.4.0.nupkg.sha512",
     "C:\\Users\\Denny\\.nuget\\packages\\cloudmersive.apiclient.netcore.ocr\\2.0.2\\cloudmersive.apiclient.netcore.ocr.2.0.2.nupkg.sha512",

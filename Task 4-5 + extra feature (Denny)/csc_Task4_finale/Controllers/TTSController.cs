@@ -32,7 +32,7 @@ namespace csc_Task4_finale.Controllers
         public IHttpActionResult Post(TextToConvert text)
         {
             
-            var apiKey = "";
+            var apiKey = "cc5df482d9c54f3c89d4bf742e7de7d8";
             var isSSL = false;
             var lang = Languages.English_UnitedStates;
             try
@@ -54,16 +54,6 @@ namespace csc_Task4_finale.Controllers
             {
                 return Content(HttpStatusCode.BadRequest, new { message = ex.Message });
             }
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
         }
     }
 }

@@ -23,7 +23,7 @@ namespace csc_Task4_finale.Controllers
     public class UploadController : ApiController
     {   
         private static readonly RegionEndpoint bucketRegion = RegionEndpoint.USEast1;
-        private static readonly string bucketName = "csctask5";
+        private static readonly string bucketName = "csc-task5";
         static readonly IAmazonS3 s3Client = new AmazonS3Client(bucketRegion);
         string authToken = "";
         [Route("api/upload")]
@@ -39,18 +39,6 @@ namespace csc_Task4_finale.Controllers
                             };
                 PutObjectResponse response = await s3Client.PutObjectAsync(putRequest);
                 return response;
-        }
-
-        // GET: api/Upload
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/Upload/5
-        public string Get(int id)
-        {
-            return "value";
         }
 
         // POST: api/Upload
@@ -164,11 +152,6 @@ namespace csc_Task4_finale.Controllers
                               );
             var result = await client.PostAsync(url, content);
             return result;
-        }
-
-        // DELETE: api/Upload/5
-        public void Delete(int id)
-        {
         }
     }
 }

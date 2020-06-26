@@ -6973,11 +6973,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CSC\\CA1\\code\\Task 8\\Task 8\\Task 8.csproj",
+      "projectUniqueName": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 8\\Task 8\\Task 8.csproj",
       "projectName": "Task 8",
-      "projectPath": "D:\\CSC\\CA1\\code\\Task 8\\Task 8\\Task 8.csproj",
+      "projectPath": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 8\\Task 8\\Task 8.csproj",
       "packagesPath": "C:\\Users\\Denny\\.nuget\\packages\\",
-      "outputPath": "D:\\CSC\\CA1\\code\\Task 8\\Task 8\\obj\\",
+      "outputPath": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 8\\Task 8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -18,13 +18,6 @@ namespace Task_6.Controllers
     {    
         string customerID = "cus_HSJgT9ML7AcfO9";
 
-        // GET: api/<ChargesController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         [HttpGet("listcharges")]
         public IActionResult GetCharges()
         {
@@ -75,18 +68,6 @@ namespace Task_6.Controllers
                 return BadRequest(e.Message);
             }
             
-        }
-
-        // PUT api/<ChargesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<ChargesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

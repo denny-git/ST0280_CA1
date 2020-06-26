@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSC\\CA1\\code\\Task 6\\Task 6\\Task 6.csproj": {}
+    "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 6\\Task 6\\Task 6.csproj": {}
   },
   "projects": {
-    "D:\\CSC\\CA1\\code\\Task 6\\Task 6\\Task 6.csproj": {
+    "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 6\\Task 6\\Task 6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSC\\CA1\\code\\Task 6\\Task 6\\Task 6.csproj",
+        "projectUniqueName": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 6\\Task 6\\Task 6.csproj",
         "projectName": "Task 6",
-        "projectPath": "D:\\CSC\\CA1\\code\\Task 6\\Task 6\\Task 6.csproj",
+        "projectPath": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 6\\Task 6\\Task 6.csproj",
         "packagesPath": "C:\\Users\\Denny\\.nuget\\packages\\",
-        "outputPath": "D:\\CSC\\CA1\\code\\Task 6\\Task 6\\obj\\",
+        "outputPath": "D:\\CSC\\CA1\\source\\ST0280_CA1\\Task 6\\Task 6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
