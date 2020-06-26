@@ -1,0 +1,31 @@
+﻿<h1>Select Microsoft Word file to convert to PDF using ConvertAPI</h1>
+<br />
+<form id="formElem" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".docx">
+    <input type="submit">
+</form>
+<br />
+<div id="div"></div>
+<script>
+    async function sendFile() {
+
+        var res = await fetch('/api/upload', {
+            method: 'POST',
+            body: new FormData(formElem)
+        })
+
+        if (res.status === 200) {
+            document.getElementById("div").innerHTML = 'File converted successfully! Download it <a href="/api/download">here</a>.</a>';
+        }
+
+        else {
+            var resObject = await res.json();
+            document.getElementById("div").innerHTML = "<font color=\"red\">Error " + await res.status + ". " + await resObject.message + "</font>";
+        }
+    }
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
+        document.getElementById("div").innerHTML = "<img src=\"/ajax-loader.gif\"/ > Uploading and converting file...";
+        sendFile();
+    };
+</script>
